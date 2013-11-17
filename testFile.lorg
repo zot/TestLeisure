@@ -1,5 +1,6 @@
 * TEST code :duh:
 #+NAME: bubba
+This is the bubba code
 #+BEGIN_SRC leisure :results dynamic
 30 + 40
 #+END_SRC
