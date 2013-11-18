@@ -10,4 +10,9 @@ This is the bubba code
 
 * one
 
+#+NAME: fred
+#+BEGIN_SRC leisure :results dynamic
+5 + 6
+#+END_SR
+
 * two
