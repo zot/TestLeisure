@@ -11,8 +11,11 @@ This is the bubba code
 * one
 
 #+NAME: fred
-#+BEGIN_SRC leisure :results dynamic
+#+BEGIN_SRC leisure
 5 + 6
-#+END_SR
+#+END_SRC
+
+#+RESULTS:
+: 11
 
 * two
