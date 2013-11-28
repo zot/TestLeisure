@@ -1,4 +1,9 @@
 * TEST code :duh:
+#+NAME: zeb
+#+BEGIN_SRC leisure :results def
+zeb x = x * 2
+#+END_SRC
+
 #+NAME: bubba
 This is the bubba code
 #+BEGIN_SRC leisure :results dynamic
