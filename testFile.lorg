@@ -15,6 +15,10 @@ This is the bubba code
 
 * one
 
+#+BEGIN_SRC html
+<i><b>Hello</b></i>
+#+END_SRC
+
 #+NAME: fred
 #+BEGIN_SRC leisure
 5 + 6
