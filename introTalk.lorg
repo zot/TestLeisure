@@ -1,3 +1,7 @@
+* Welcome to Leisure                                                 :hidden:
+#+BEGIN_SRC leisure :results def
+require 'svg'
+#+END_SRC
 * Welcome to Leisure!                                                :hidden:
 Here's the [[https://github.com/zot/Leisure][project page]]
 
