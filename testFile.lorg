@@ -8,6 +8,7 @@ zeb x = x * 2
 This is the bubba code
 #+BEGIN_SRC leisure :results dynamic
 30 + 40
+[1 2 (polygon nil) 3 (polygon nil) 4]
 #+END_SRC
 
 #+RESULTS:
