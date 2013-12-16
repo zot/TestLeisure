@@ -13,7 +13,7 @@ Here's the [[https://github.com/zot/Leisure][project page]]
 * Welcome to Leisure
 Here's the [[https://github.com/zot/Leisure][project page]]
 
-## Leisure reveals arcane secrets so that you can write modern programs using the enlightened ways of the ancients!
+** Leisure reveals arcane secrets so that you can write modern programs using the enlightened ways of the ancients!
 
 ![Tiny Concepts](tinyconcepts.png)
 * Welcome to Leisure                                                 :hidden:
@@ -123,7 +123,7 @@ Here's the [[https://github.com/zot/Leisure][project page]]
 * Notebooks: Develop interactively                                   :hidden:
 
 ** Evaluate expressions in the document
-#+BEGIN_SRC leisure
+#+BEGIN_SRC leisure :results dynamic
 3 + 4
 cons 1 (cons 2 nil)
 ['a' 'b' 1 'c']
@@ -134,7 +134,7 @@ cons 1 (cons 2 nil)
 * Notebooks: Develop interactively                                   :hidden:
 
 ** Evaluate expressions in the document
-#+BEGIN_SRC leisure
+#+BEGIN_SRC leisure :results dynamic
 3 + 4
 cons 1 (cons 2 nil)
 ['a' 'b' 1 'c']
@@ -147,7 +147,7 @@ cons 1 (cons 2 nil)
 * Notebooks: Develop interactively
 
 ** Evaluate expressions in the document
-#+BEGIN_SRC leisure
+#+BEGIN_SRC leisure :results dynamic
 3 + 4
 cons 1 (cons 2 nil)
 ['a' 'b' 1 'c']
@@ -161,7 +161,8 @@ cons 1 (cons 2 nil)
 ** But you can direct Leisure to
 * Notebooks: they're Webby
 ** HTML-y values display right in the document
-#+BEGIN_SRC leisure
+** Just like the old days with Lisp Machines (and like Racket)
+#+BEGIN_SRC leisure :results dynamic
 html '<i><b>Hello</b></i>'
 rect nil
 polygon nil
@@ -169,7 +170,7 @@ polygon nil
 * Notebooks: Bret Victor-like sliders
 
 ** [The Khan Academy](http://www.khanacademy.org) has these, too, BTW
-#+BEGIN_SRC leisure
+#+BEGIN_SRC leisure :results dynamic
 xAmt = 10
 svgConcat [
   translate
@@ -182,7 +183,7 @@ rotate (polygon nil) 90
 * Notebooks: Develop interactively
 
 ** Verify how your code parses, with AST buttons
-#+BEGIN_SRC leisure
+#+BEGIN_SRC leisure :results dynamic
 add3 a b c = a + b + c
 #+END_SRC
 * Notebooks: Develop interactively
@@ -194,13 +195,13 @@ add3 a b c = a + b + c
 ** Updating
 *** Simplistic events
 *** Parse trees just hide their notebook expressions
-#+BEGIN_SRC leisure
+#+BEGIN_SRC leisure :results dynamic
 add4 = 1 + 2 + 3
 #+END_SRC
 * Notebooks: Develop interactively
 
 ** Test cases run whenever you change your code
-#+BEGIN_SRC leisure
+#+BEGIN_SRC leisure :results dynamic
 #@test "f1"
 #@expected "1"
 f1 = 1
@@ -216,7 +217,7 @@ f2 = 2
 ** Eclipse Orion -- has simple CORS API for workspace and Git!
 ** Local files (requires an install)
 
-#+BEGIN_SRC leisure
+#+BEGIN_SRC leisure :results dynamic
 do
   x <- read 'local-storage:///code'
   x (\d . print d) id
@@ -272,7 +273,7 @@ le xy = or (lt x y) (eq x y)
 </pre></td></tr></table>
 #+END_SRC
 
-#+BEGIN_SRC leisure
+#+BEGIN_SRC leisure :results dynamic
 le x y = or
   lt x y
   eq x y
@@ -291,7 +292,7 @@ le x y = or
 #+END_SRC
 
 **[ is a macro and '[' and ']' make groups
-#+BEGIN_SRC leisure
+#+BEGIN_SRC leisure :results dynamic
 indentation = [
   [1 2]
   [3 4]]
@@ -302,12 +303,12 @@ indentation
 
 ** macros rewrite their expressions at compile time, like in Clojure (Lisp)
 ** macros can do varargs, which isn't so easy in pure Lambda Calculus
-#+BEGIN_SRC leisure
+#+BEGIN_SRC leisure :results dynamic
 f4 = concat[1 2 3]
 f4
 #+END_SRC
 * The Language: It's lazy
-#+BEGIN_SRC leisure
+#+BEGIN_SRC leisure :results dynamic
 ignore2nd a b = a
 ignore2nd (error 'an error') 1
 ignore2nd 1 (error 'an error')
@@ -331,7 +332,7 @@ f 2 (-1)
 * The Language: Metaprogramming
 
 ** basic parsing can define tokens and groups
-#+BEGIN_SRC leisure
+#+BEGIN_SRC leisure :results dynamic
 [1,2 3]
 #+END_SRC
 * The Language: Metaprogramming
@@ -339,11 +340,11 @@ f 2 (-1)
 ** macros rewrite expressions, using cons/lcons (like cons, but with start and end positions)
 ** Combining groups with macros can work like varargs
 *** [
-#+BEGIN_SRC leisure
+#+BEGIN_SRC leisure :results dynamic
 ex1 = [1 2 3]
 #+END_SRC
 *** concat[
-#+BEGIN_SRC leisure
+#+BEGIN_SRC leisure :results dynamic
 ex2 = concat[1 2 3]
 #+END_SRC
 **** making concat[ a separate macro makes it more convenient, because it eliminates parentheses
@@ -351,7 +352,7 @@ ex2 = concat[1 2 3]
 
 ** parse filters are like macros, but they process **all** code, (also using cons/lcons)
 ** a parse filter processes infix expressions
-#+BEGIN_SRC leisure
+#+BEGIN_SRC leisure :results dynamic
 ex3 = 1 + (2 + 3) + 4
 #+END_SRC
 ** Right now, Do (like in Haskell) is a parse filter
@@ -361,20 +362,20 @@ ex3 = 1 + (2 + 3) + 4
 ![Compiler Flow](LeisureParsingFlow.svg)
 * The Language: Functional support
 ** Streams, etc.
-#+BEGIN_SRC leisure
+#+BEGIN_SRC leisure :results dynamic
 increasing x = [x | (increasing x + 1)]
 naturals = increasing 1
 take 5 (filter even? (map (\x . x + 10) naturals))
 #+END_SRC
 * The Language: Data Types
 ** Any function which returns a lambda confers its name as the data type on the lambda
-#+BEGIN_SRC leisure
+#+BEGIN_SRC leisure :results dynamic
 getType [1]
 person name addr = \f . f name addr
 getType (person 'bob' '123 Maple St')
 #+END_SRC
 * The Language: Simple Pattern Matching
-#+BEGIN_SRC leisure
+#+BEGIN_SRC leisure :results dynamic
 smop x = 'a smop'
 smop x::person = concat['a person smop (' (x \n a . a) ')']
 smop 3
@@ -394,7 +395,7 @@ smop (person 'bob' '123 Maple St')
 *** getName (person {name: n}) = n
 * The Language: Monads
 ** Expression output box is part of monad's "environment"
-#+BEGIN_SRC leisure
+#+BEGIN_SRC leisure :results dynamic
 do
     x <- prompt "What is your name?"
     print concat["Hello, " x]
