@@ -19,6 +19,10 @@ This is the bubba code
 
 #+BEGIN_SRC html
 <i><b>Hello</b> <button onclick='alert("ouch!")'>Click me!</button></i>
+<h1>h1</h1>
+<h2>h2</h2>
+<h3>h3</h3>
+<h4>h4</h4>
 #+END_SRC
 
 #+NAME: fred

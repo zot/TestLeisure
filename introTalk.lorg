@@ -1,9 +1,15 @@
 * Welcome to Leisure!                                                :hidden:
+- Click the Leisure button to turn on slide mode
+* Welcome to Leisure!                                                :hidden:
 Here's the [[https://github.com/zot/Leisure][project page]]
+
 - Leisure reveals arcane secrets so that you can write modern programs using the enlightened ways of the ancients!
 [[tinyconcepts.png]]
+
 - Use the left arrow, right arrow, page up, page down, home, and end keys to navigate
+
 - To edit text, double click.  To exit editing, hit tab.
+
 - To view this as a regular notebook instead of slides, hit escape or click the slides button, below
 * Welcome to Leisure
 Here's the [[https://github.com/zot/Leisure][project page]]
@@ -33,134 +39,176 @@ Here's the [[https://github.com/zot/Leisure][project page]]
 Here's the [[https://github.com/zot/Leisure][project page]]
 
 - Leisure is: a **Toy**
+
 - We like to share our toys.
+
 - Leisure is **open source**.
+
 - Please play with it and change it!
+
 - Please use it to make cool stuff!
 * Programming should be
 - Fun
+
 - Easy
+
 - Interesting
+
 - There should be cool stuff for you to play with
+
 - Leisure tries to make it that way
 * Programming should be
 - Fun
+
 - Easy
+
 - Interesting
+
 - There should be cool stuff for you to play with
+
 - Leisure tries to make it that way
+
 - Leisure is targeted at kids with no programming experience
 * Programming should be
 - Fun
+
 - Easy
+
 - Interesting
+
 - There should be cool stuff for you to play with
+
 - Leisure tries to make it that way
+
 - Leisure is targeted at kids with no programming experience
--All you need is a web browser -- no install needed
+
+- All you need is a web browser -- no install needed
 * Programming should be
--Fun
--Easy
--Interesting
--There should be cool stuff for you to play with
--Leisure tries to make it that way
--Leisure is targeted at kids with no programming experience
--All you need is a web browser -- no install needed
--Leisure is also targeted at experts with years of programming experience
-* Notebooks                                                          :hidden:
+- Fun
 
--All Leisure programs and libraries are (or will be) org documents
-* Notebooks                                                          :hidden:
+- Easy
 
--All Leisure programs and libraries are (or will be) org documents
--They render as notebooks (ala Mathematica)
-* Notebooks                                                          :hidden:
+- Interesting
 
--All Leisure programs and libraries are (or will be) org documents
--They render as notebooks (ala Mathematica)
--Notebooks are computing environments -- sort of a cross between an IDE and REPL
-* Notebooks                                                          :hidden:
+- There should be cool stuff for you to play with
 
--All Leisure programs and libraries are (or will be) org documents
--They render as notebooks (ala Mathematica)
--Notebooks are computing environments -- sort of a cross between an IDE and REPL
--You can edit them
-* Notebooks                                                          :hidden:
+- Leisure tries to make it that way
 
--All Leisure programs and libraries are (or will be) org documents
--They render as notebooks (ala Mathematica)
--Notebooks are computing environments -- sort of a cross between an IDE and REPL
--You can edit them
--This presentation is a Leisure notebook
-* Notebooks                                                          :hidden:
+- Leisure is targeted at kids with no programming experience
 
--All Leisure programs and libraries are (or will be) org documents
--They render as notebooks (ala Mathematica)
--Notebooks are computing environments -- sort of a cross between an IDE and REPL
--You can edit them
--This presentation is a Leisure notebook (you are seeing a Leisure source document)
--(edit this)
+- All you need is a web browser -- no install needed
+
+- Leisure is also targeted at experts with years of programming experience
+* Notebooks                                                          :hidden:
+- All Leisure programs and libraries are (or will be) org documents
+* Notebooks                                                          :hidden:
+- All Leisure programs and libraries are (or will be) org documents
+
+- They render as notebooks (ala Mathematica)
+* Notebooks                                                          :hidden:
+- All Leisure programs and libraries are (or will be) org documents
+
+- They render as notebooks (ala Mathematica)
+
+- Notebooks are computing environments -- sort of a cross between an IDE and REPL
+* Notebooks                                                          :hidden:
+- All Leisure programs and libraries are (or will be) org documents
+
+- They render as notebooks (ala Mathematica)
+
+- Notebooks are computing environments -- sort of a cross between an IDE and REPL
+
+- You can edit them
+* Notebooks                                                          :hidden:
+- All Leisure programs and libraries are (or will be) org documents
+
+- They render as notebooks (ala Mathematica)
+
+- Notebooks are computing environments -- sort of a cross between an IDE and REPL
+
+- You can edit them
+
+- This presentation is a Leisure notebook
+* Notebooks                                                          :hidden:
+- All Leisure programs and libraries are (or will be) org documents
+
+- They render as notebooks (ala Mathematica)
+
+- Notebooks are computing environments -- sort of a cross between an IDE and REPL
+
+- You can edit them
+
+- This presentation is a Leisure notebook (you are seeing a Leisure source document)
+
+- (edit this)
 * Notebooks
+- All Leisure programs and libraries are (or will be) org documents
 
--All Leisure programs and libraries are (or will be) org documents
--They render as notebooks (ala Mathematica)
--Notebooks are computing environments -- sort of a cross between an IDE and REPL
--You can edit them
--This presentation is a Leisure notebook (you are seeing a Leisure source document)
--(edit this)
--(click the slide button)
+- They render as notebooks (ala Mathematica)
+
+- Notebooks are computing environments -- sort of a cross between an IDE and REPL
+
+- You can edit them
+
+- This presentation is a Leisure notebook (you are seeing a Leisure source document)
+
+- (edit this)
+
+- (click the slide button)
 * Notebooks
+- What if org code blocks could execute in your browser?
 
--What if org code blocks could execute in your browser?
--(edit this and type a code block here)
+- (edit this and type a code block here)
 * Notebooks: Develop interactively                                   :hidden:
 * Notebooks: Develop interactively                                   :hidden:
-
--Evaluate expressions in the document
+- Evaluate expressions in the document
 #+BEGIN_SRC leisure :results dynamic
 3 + 4
 cons 1 (cons 2 nil)
 ['a' 'b' 1 'c']
 #+END_SRC
 
--Keep the expressions as live examples in documentation
--Other people can use them to understand your code better
+- Keep the expressions as live examples in documentation
+
+- Other people can use them to understand your code better
 * Notebooks: Develop interactively                                   :hidden:
-
--Evaluate expressions in the document
+- Evaluate expressions in the document
 #+BEGIN_SRC leisure :results dynamic
 3 + 4
 cons 1 (cons 2 nil)
 ['a' 'b' 1 'c']
 #+END_SRC
 
--Keep the expressions as live examples in documentation
--Other people can use them to understand your code better
--*Leisure doesn't normally execute expressions on load*
-* Notebooks: Develop interactively
+- Keep the expressions as live examples in documentation
 
--Evaluate expressions in the document
-#+BEGIN_SRC leisure :results dynamic
-3 + 4
-cons 1 (cons 2 nil)
-['a' 'b' 1 'c']
-#+END_SRC
+- Other people can use them to understand your code better
 
--Keep the expressions as live examples in documentation
--Other people can use them to understand your code better
 - *Leisure doesn't normally execute expressions on load*
--But you can direct Leisure to
+* Notebooks: Develop interactively
+- Evaluate expressions in the document
+#+BEGIN_SRC leisure :results dynamic
+3 + 4
+cons 1 (cons 2 nil)
+['a' 'b' 1 'c']
+#+END_SRC
+
+- Keep the expressions as live examples in documentation
+
+- Other people can use them to understand your code better
+
+- *Leisure doesn't normally execute expressions on load*
+
+- But you can direct Leisure to
 * Notebooks: they're Webby
--HTML-y values display right in the document
--Just like the old days with Lisp Machines (and like Racket)
+- HTML-y values display right in the document
+
+- Just like the old days with Lisp Machines (and like Racket)
 #+BEGIN_SRC leisure :results dynamic
 html '<i><b>Hello</b></i>'
 rect nil
 polygon nil
 #+END_SRC
-* Notebooks: Bret Victor-like sliders
-
--[The Khan Academy](http://www.khanacademy.org) has these, too, BTW
+* Notebooks: Bret Victor-ly sliders
 #+BEGIN_SRC leisure :results dynamic
 xAmt = 10
 svgConcat [
@@ -172,26 +220,22 @@ svgConcat [
 rotate (polygon nil) 90
 #+END_SRC
 * Notebooks: Develop interactively
-
--Verify how your code parses, with AST buttons
+- Verify how your code parses, with AST buttons
 #+BEGIN_SRC leisure :results dynamic
 add3 a b c = a + b + c
 #+END_SRC
 * Notebooks: Develop interactively
-
--Updating
+- Updating
 *** Simplistic events
 * Notebooks: Develop interactively
-
--Updating
+- Updating
 *** Simplistic events
 *** Parse trees just hide their notebook expressions
 #+BEGIN_SRC leisure :results dynamic
 add4 = 1 + 2 + 3
 #+END_SRC
 * Notebooks: Develop interactively
-
--Test cases run whenever you change your code
+- Test cases can run whenever you change your code
 #+BEGIN_SRC leisure :results dynamic
 #@test "f1"
 #@expected "1"
@@ -201,12 +245,14 @@ f1 = 1
 #@expected "1"
 f2 = 2
 #+END_SRC
+* Notebooks: Social Coding
+- See comments on your code from other people
+
+- Comment on other peoples' code
 * Notebooks: Storage (in the works)
--Import/export zip files
--Google Drive (can already connect and create directories and files)
--Dropbox
--Eclipse Orion -- has simple CORS API for workspace and Git!
--Local files (requires an install)
+- Github
+
+- Local files (requires an install -- currently turned off)
 
 #+BEGIN_SRC leisure :results dynamic
 do
@@ -219,41 +265,35 @@ do
 #+END_SRC
 * Notebooks: Deploy your code...                                     :hidden:
 * Notebooks: Deploy your code...                                     :hidden:
-
--...as a Notebook, like this
+- ...as a Notebook, like this
 * Notebooks: Deploy your code...                                     :hidden:
+- ...as a Notebook, like this
 
--...as a Notebook, like this
-
--...or as a "regular" web page
+- ...or as a "regular" web page
 * Notebooks: Deploy your code...
+- ...as a Notebook, like this
 
--...as a Notebook, like this
+- ...or as a "regular" web page
 
--...or as a "regular" web page
-
--...or in node.js
+- ...or in node.js
 * Notebooks: Q&A
 * The Language                                                       :hidden:
 * The Language                                                       :hidden:
-
--Leisure compiles to Javascript
+- Leisure compiles to Javascript
 * The Language                                                       :hidden:
+- Leisure compiles to Javascript
 
--Leisure compiles to Javascript
-
--It's a naive compiler
+- It's a naive compiler
 * The Language
+- Leisure compiles to Javascript
 
--Leisure compiles to Javascript
+- It's a naive compiler
 
--It's a naive compiler
-
--There's a lot of room for improvement!
+- There's a lot of room for improvement!
 * The Language: Syntax minimizes parentheses                         :hidden:
 * The Language: Syntax minimizes parentheses
 
--Each indented line adds a group to the overhanging expression
+- Each indented line adds a group to the overhanging expression
 #+BEGIN_SRC html
 <table><tr><td style="border: solid black 2px; padding: 20px"><pre style="font-weight: bold; font-size: 150%">
 le x y = or
@@ -270,8 +310,9 @@ le x y = or
   eq x y
 #+END_SRC
 * The Language: Syntax minimizes parentheses
--Each indented line adds a group to the overhanging expression
--Grouping still works, though
+- Each indented line adds a group to the overhanging expression
+
+- Grouping still works, though
 #+BEGIN_SRC html
 <table><tr><td style="border: solid black 2px; padding: 20px"><pre style="font-weight: bold; font-size: 150%">
 [
@@ -291,9 +332,9 @@ indentation = [
 indentation
 #+END_SRC
 * The Language: Syntax minimizes parentheses
+- macros rewrite their expressions at compile time, like in Clojure (Lisp)
 
--macros rewrite their expressions at compile time, like in Clojure (Lisp)
--macros can do varargs, which isn't so easy in pure Lambda Calculus
+- macros can do varargs, which isn't so easy in pure Lambda Calculus
 #+BEGIN_SRC leisure :results dynamic
 f4 = concat[1 2 3]
 f4
@@ -323,14 +364,19 @@ f 2 (-1)
 - It's like Lambda Calculus
 * The Language: Partial application                                  :hidden:
 - It's like Lambda Calculus
+
 - and Haskell
 * The Language: Partial application                                  :hidden:
 - It's like Lambda Calculus
+
 - and Haskell
+
 - But it displays partial applications
 * The Language: Partial application
 - It's like Lambda Calculus
+
 - and Haskell
+
 - But it displays partial applications
 #+BEGIN_SRC leisure :results dynamic
 cons 1 nil
@@ -340,100 +386,125 @@ cons 1
 #+END_SRC
 * The Language: Metaprogramming                                      :hidden:
 * The Language: Metaprogramming
-
--basic parsing can define tokens and groups
+- basic parsing can define tokens and groups
 #+BEGIN_SRC leisure :results dynamic
 [1,2 3]
 #+END_SRC
 * The Language: Metaprogramming
+- macros rewrite expressions (input and output is a list)
 
--macros rewrite expressions, using cons/lcons (like cons, but with start and end positions)
--Combining groups with macros can work like varargs
-*** [
+- Combining groups with macros can work like varargs
+[ ... ]
 #+BEGIN_SRC leisure :results dynamic
 ex1 = [1 2 3]
 #+END_SRC
-*** concat[
+concat[ ... ]
 #+BEGIN_SRC leisure :results dynamic
 ex2 = concat[1 2 3]
 #+END_SRC
-**** making concat[ a separate macro makes it more convenient, because it eliminates parentheses
 * The Language: Metaprogramming
+- Do (a lot like Haskell's do) is a macro
 
--parse filters are like macros, but they process **all** code, (also using cons/lcons)
--a parse filter processes infix expressions
+* The Language: Metaprogramming
+- parse filters are like macros, but an active parse filter processes **all** code
+
+- Infix is implemented in Leisure as a parse filter
 #+BEGIN_SRC leisure :results dynamic
 ex3 = 1 + (2 + 3) + 4
 #+END_SRC
--Right now, Do (like in Haskell) is a parse filter
--At this point, once you turn on a parse filter, it affects subsequent imported files
--In the future, each file will be able to specify its own parse filters
+- Parse filters are only active within a given file
+
+- Each file can specify which parse filters it uses
+
+- Parse filters can be activated/deactivated at any point in a file
 * The Language: Metaprogramming
 ![Compiler Flow](LeisureParsingFlow.svg)
 * The Language: Functional support
--Streams, etc.
+- Streams, etc.
 #+BEGIN_SRC leisure :results dynamic
 increasing x = [x | (increasing x + 1)]
 naturals = increasing 1
 take 5 (filter even? (map (\x . x + 10) naturals))
 #+END_SRC
 * The Language: Data Types
--Any function which returns a lambda confers its name as the data type on the lambda
+- Any function which only returns a lambda places a data type with its name on the lambda
 #+BEGIN_SRC leisure :results dynamic
 getType [1]
 person name addr = \f . f name addr
 getType (person 'bob' '123 Maple St')
 #+END_SRC
-* The Language: Simple Pattern Matching
-#+BEGIN_SRC leisure :results dynamic
-smop x = 'a smop'
-smop x::person = concat['a person smop (' (x \n a . a) ')']
-smop 3
-smop (person 'bob' '123 Maple St')
+* The Language: Function advice
+#+BEGIN_SRC leisure :results def
+person name addr = \f . f name addr
+
+defaultName x = 'Default'
+defCase defaultName.person p | hasType p person -> p \n a . n
 #+END_SRC
-* More later
--Fancier pattern matching
-*** Got some basic plans for structural patterns, like in Haskell (maybe more powerful -- not sure)
+#+BEGIN_SRC leisure :results dynamic
+defaultName 3
+defaultName (person 'bob' '123 Maple St')
+#+END_SRC
+* The Language: Function properties
+- Functions can be declared with key-value properties
 
-*** last [x] = x
-*** last [x | y] = last y
+- type assertions
 
-*** find key [] = none
-*** find key [key value | rest] = some value
-*** find key [\_ \_ | rest] = find key rest
-
-*** getName (person {name: n}) = n
+- alternate behavior for known types (like pretty-printing association lists)
 * The Language: Monads
--Expression output box is part of monad's "environment"
+- Expression output box is part of monad's "environment"
 #+BEGIN_SRC leisure :results dynamic
 do
     x <- prompt "What is your name?"
     print concat["Hello, " x]
 #+END_SRC
 * The Language: Monads
-
--code that runs at load-time can use monads to affect the Leisure environment
+- code that runs at load-time can use monads to affect the Leisure environment
 * The Language: Monads
+- code that runs at load-time can use monads to affect the Leisure environment
 
--code that runs at load-time can use monads to affect the Leisure environment
--import is a monad
+- import is a monad
 * The Language: Monads
+- code that runs at load-time can use monads to affect the Leisure environment
 
--code that runs at load-time can use monads to affect the Leisure environment
--import is a monad
--parser directives are monads
+- import is a monad
+
+- parser directives are monads
 * The Language: Monads
+- code that runs at load-time can use monads to affect the Leisure environment
 
--code that runs at load-time can use monads to affect the Leisure environment
--import is a monad
--parser directives are monads
--monads can affect the notebook environment
+- import is a monad
+
+- parser directives are monads
+
+- monads can affect the notebook environment
 *** Setting themes
 *** Turning on auto test mode
-* The Language: Debugging
--Support specific to lazy evaluation is in the works
--Some omniscient debugging techniques
--Two stack traces for an error
+* Planned: Pattern matching
+- Structural patterns, like in Haskell
+
+  last [x] = x
+  last [x | y] = last y
+
+  equal x y = eq x y
+  equal [h1 | t1] [h2 | t2] = and
+    equal h1 h2
+    equal t1 t2
+
+  find key [] = none
+  find key [key value | rest] = some value
+  find key [\_ \_ | rest] = find key rest
+
+  getName (person {name: n}) = n
+
+- Uses function advice
+
+- Can make a dispatch table based on data type
+* Planned: Debugging
+- Support specific to lazy evaluation is in the works
+
+- Some omniscient debugging techniques
+
+- Two stack traces for an error
 *** Stack trace of where a value was created
 *** Stack trace of where a value was requested
 * The Language Q&A
