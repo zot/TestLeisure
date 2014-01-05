@@ -17,13 +17,13 @@ This is the bubba code
 
 * one
 
-#+BEGIN_SRC html
+#+BEGIN_HTML
 <i><b>Hello</b> <button onclick='alert("ouch!")'>Click me!</button></i>
 <h1>h1</h1>
 <h2>h2</h2>
 <h3>h3</h3>
 <h4>h4</h4>
-#+END_SRC
+#+END_HTML
 
 #+NAME: fred
 #+BEGIN_SRC leisure
@@ -35,3 +35,5 @@ This is the bubba code
   - three
 - four
 * two
+test markup *bold* word /italic/ fred _underline_
+[[tinyconcepts.png]]

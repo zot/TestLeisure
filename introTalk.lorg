@@ -2,32 +2,28 @@
 - Click the Leisure button to turn on slide mode
 * Welcome to Leisure!                                                :hidden:
 Here's the [[https://github.com/zot/Leisure][project page]]
-
 - Leisure reveals arcane secrets so that you can write modern programs using the enlightened ways of the ancients!
+
 [[tinyconcepts.png]]
 
 - Use the left arrow, right arrow, page up, page down, home, and end keys to navigate
 
 - To edit text, double click.  To exit editing, hit tab.
 
-- To view this as a regular notebook instead of slides, hit escape or click the slides button, below
-* Welcome to Leisure
+- To view this as a regular notebook instead of slides, hit escape or click the Leisure button
+* Welcome to Leisure!
 Here's the [[https://github.com/zot/Leisure][project page]]
-
 - Leisure reveals arcane secrets so that you can write modern programs using the enlightened ways of the ancients!
 
-![Tiny Concepts](tinyconcepts.png)
-* Welcome to Leisure                                                 :hidden:
+[[tinyconcepts.png]]
+* Welcome to Leisure!                                                :hidden:
 Here's the [[https://github.com/zot/Leisure][project page]]
-
 - Leisure is: a lazy dynamically typed functional language with a notebook environment
-* Welcome to Leisure                                                 :hidden:
+* Welcome to Leisure!                                                :hidden:
 Here's the [[https://github.com/zot/Leisure][project page]]
-
 - Leisure is: a **Toy**
-* Welcome to Leisure                                                 :hidden:
+* Welcome to Leisure!                                                :hidden:
 Here's the [[https://github.com/zot/Leisure][project page]]
-
 - Leisure is: a **Toy**
 
 - Let's listen to Dr. Steel's definition of *toy...*
@@ -35,9 +31,8 @@ Here's the [[https://github.com/zot/Leisure][project page]]
 #+BEGIN_SRC html
 <iframe width="640" height="480" src="http://www.youtube.com/embed/J48vuoO2PQY?start=78" frameborder="0" allowfullscreen></iframe>
 #+END_SRC
-* Welcome to Leisure                                                 :hidden:
+* Welcome to Leisure!                                                :hidden:
 Here's the [[https://github.com/zot/Leisure][project page]]
-
 - Leisure is: a **Toy**
 
 - We like to share our toys.
@@ -138,23 +133,9 @@ Here's the [[https://github.com/zot/Leisure][project page]]
 
 - You can edit them
 
-- This presentation is a Leisure notebook (you are seeing a Leisure source document)
+- This presentation is a Leisure notebook
 
-- (edit this)
-* Notebooks
-- All Leisure programs and libraries are (or will be) org documents
-
-- They render as notebooks (ala Mathematica)
-
-- Notebooks are computing environments -- sort of a cross between an IDE and REPL
-
-- You can edit them
-
-- This presentation is a Leisure notebook (you are seeing a Leisure source document)
-
-- (edit this)
-
-- (click the slide button)
+- (click the Leisure button)
 * Notebooks
 - What if org code blocks could execute in your browser?
 
@@ -388,7 +369,7 @@ cons 1
 * The Language: Metaprogramming
 - basic parsing can define tokens and groups
 #+BEGIN_SRC leisure :results dynamic
-[1,2 3]
+[1 2 3]
 #+END_SRC
 * The Language: Metaprogramming
 - macros rewrite expressions (input and output is a list)
@@ -510,11 +491,11 @@ do
 * The Language Q&A
 * Contact
 
-[Github project](https://github.com/zot/Leisure)
-![Github URL](githubUrl.png)
+[[https://github.com/zot/Leisure][Github project]]
+[[githubUrl.png]]
 
-[This notebook](http://zot.github.com/Leisure/talk.html?slides=true)
-![This notebook](slidesUrl.png)
+[[http://zot.github.com/Leisure/talk.html?slides=true][This notebook]]
+[[slidesUrl.png]]
 
 Please help!
 If you want to get in touch, you can email me at bill dot burdick at gmail dot com.
