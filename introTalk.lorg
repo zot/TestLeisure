@@ -11,7 +11,18 @@
 <div style="text-align: center">Here's the <a href="https://github.com/zot/Leisure">project page</a></div>
 #+END_HTML
 - Leisure reveals arcane secrets so that you can write modern programs using the enlightened ways of the ancients!
-
+* Welcome to Leisure!
+#+BEGIN_HTML
+<div style="text-align: center">Here's the <a href="https://github.com/zot/Leisure">project page</a></div>
+#+END_HTML
+- Leisure reveals arcane secrets so that you can write modern programs using the enlightened ways of the ancients!
+  - I.e. something like Lambda Calculus
+* Welcome to Leisure!
+#+BEGIN_HTML
+<div style="text-align: center">Here's the <a href="https://github.com/zot/Leisure">project page</a></div>
+#+END_HTML
+- Leisure reveals arcane secrets so that you can write modern programs using the enlightened ways of the ancients!
+  - I.e. something like Lambda Calculus
 [[tinyconcepts.png]]
 * Welcome to Leisure!
 #+BEGIN_HTML
