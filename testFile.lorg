@@ -1,4 +1,19 @@
+* HTML slide
+#+BEGIN_HTML
+<style>
+        .slideHtml:host #flow {
+                position: absolute;
+                top: 52px;
+                left: calc(50% - 120px);
+        }
+</style>
+<img id='flow' src='images/LeisureParsingFlow.svg'></img>
+#+END_HTML
 * TEST code :duh:
+- one
+
+- two
+
 #+NAME: zeb
 #+BEGIN_SRC leisure :results def
 zeb x = x * 2
