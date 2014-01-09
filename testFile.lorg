@@ -1,3 +1,8 @@
+* test
+#+BEGIN_SRC leisure :results test
+3 + 4
+#+END_SRC
+#+EXPECTED: 7
 * HTML slide
 #+BEGIN_HTML
 <style>
@@ -9,7 +14,7 @@
 </style>
 <img id='flow' src='images/LeisureParsingFlow.svg'></img>
 #+END_HTML
-* TEST code :duh:
+* code                                                                  :duh:
 - one
 
 - two
