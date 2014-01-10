@@ -8,6 +8,28 @@
 - To view this as a regular notebook instead of slides, hit escape or click the Leisure button
 * Welcome to Leisure!
 #+BEGIN_HTML
+<style>
+        /*.slideHtml #splash {*/
+        .slideHtml:host {
+                z-index: 10000;
+                background: url(images/steampunk_background.jpg) border-box no-repeat 0% 0% / 100% 100%;
+                position: absolute;
+                /*top: -120px;
+                left: -100px;
+                bottom: -120px;
+                right: -100px;*/
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+        }
+</style>
+<table id="splash" style="width: 100%; height: 100%;">
+  <tr style="vertical-align: middle"><td style="text-align: center"><img src="images/steampunk_leisure_button.gif"></td></tr>
+</table>
+#+END_HTML
+* Welcome to Leisure!
+#+BEGIN_HTML
 <div style="text-align: center">Here's the <a href="https://github.com/zot/Leisure">project page</a></div>
 #+END_HTML
 - Leisure reveals arcane secrets so that you can write modern programs using the enlightened ways of the ancients!
