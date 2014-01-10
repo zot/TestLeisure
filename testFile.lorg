@@ -3,6 +3,7 @@
 3 + 4
 #+END_SRC
 #+EXPECTED: 7
+#+RESULTS:
 * HTML slide
 #+BEGIN_HTML
 <style>
