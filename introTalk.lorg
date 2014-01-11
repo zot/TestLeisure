@@ -9,8 +9,7 @@
 * Welcome to Leisure!
 #+BEGIN_HTML
 <style>
-        /*.slideHtml #splash {*/
-        .slideHtml:host {
+        .slideHtml {
                 z-index: 10000;
                 background: url(images/steampunk_background.jpg) border-box no-repeat 0% 0% / 100% 100%;
                 position: absolute;
@@ -25,7 +24,7 @@
         }
 </style>
 <table id="splash" style="width: 100%; height: 100%;">
-  <tr style="vertical-align: middle"><td style="text-align: center"><img src="images/steampunk_leisure_button.gif"></td></tr>
+  <tr style="vertical-align: middle"><td style="text-align: center"><img src="images/steampunk_leisure_button.png"></td></tr>
 </table>
 #+END_HTML
 * Welcome to Leisure!
@@ -181,7 +180,6 @@
 * Notebooks: Develop interactively
 * Notebooks: Develop interactively
 - Evaluate expressions in the document
-
 #+BEGIN_SRC leisure :results dynamic
 3 + 4
 cons 1 (cons 2 nil)
@@ -430,11 +428,15 @@ ex3 = 1 + (2 + 3) + 4
 * The Language: Metaprogramming
 #+BEGIN_HTML
 <style>
-        .slideHtml:host #flow {
+        .slideHtml #flow {
                 position: absolute;
                 /*top: 52px;*/
-                top: 80px;
-                left: calc(50% - 120px);
+                /*top: 80px;*/
+                /*top: calc(40px + 28px + 1em);*/
+                top: 140px;
+                left: calc(50% - 180px);
+                height: calc(100% - 140px - 72px);
+                width: auto;
         }
 </style>
 <img id='flow' src='images/LeisureParsingFlow.svg'></img>

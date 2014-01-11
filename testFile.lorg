@@ -1,20 +1,25 @@
+* HTML slide
+#+BEGIN_HTML
+<style>
+        .slideHtml #flow {
+                position: absolute;
+                /*top: 52px;*/
+                /*top: 80px;*/
+                /*top: calc(40px + 28px + 1em);*/
+                top: 140px;
+                left: calc(50% - 180px);
+                height: calc(100% - 140px - 72px);
+                width: auto;
+        }
+</style>
+<img id='flow' src='images/LeisureParsingFlow.svg'></img>
+#+END_HTML
 * test
 #+BEGIN_SRC leisure :results test
 3 + 4
 #+END_SRC
 #+EXPECTED: 7
 #+RESULTS:
-* HTML slide
-#+BEGIN_HTML
-<style>
-        .slideHtml:host #flow {
-                position: absolute;
-                top: 52px;
-                left: calc(50% - 120px);
-        }
-</style>
-<img id='flow' src='images/LeisureParsingFlow.svg'></img>
-#+END_HTML
 * code                                                                  :duh:
 - one
 
