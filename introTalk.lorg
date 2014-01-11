@@ -9,6 +9,7 @@
 * Welcome to Leisure!
 #+BEGIN_HTML
 <style>
+        /* this works but should be changed to use :host, later */
         .slideHtml {
                 z-index: 10000;
                 background: url(images/steampunk_background.jpg) border-box no-repeat 0% 0% / 100% 100%;

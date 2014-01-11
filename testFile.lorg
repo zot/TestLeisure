@@ -1,3 +1,7 @@
+* list
+- duh
+- normal [[http:maluba.com][fred *bold* */bold italic/*]]
+- dur
 * HTML slide
 #+BEGIN_HTML
 <style>
