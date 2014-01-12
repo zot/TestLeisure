@@ -1,3 +1,15 @@
+* autotest
+#+BEGIN_SRC leisure :results def
+x = 5
+#+END_SRC
+#+BEGIN_SRC leisure :results autotest
+x
+#+END_SRC
+:EXPECTED:
+: 5
+:END:
+#+RESULTS:
+: 5
 * test
 #+BEGIN_SRC leisure :results test
 3 + 4
