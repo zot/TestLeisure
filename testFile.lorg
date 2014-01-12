@@ -22,17 +22,23 @@
 :END:
 #+RESULTS:
 : 7
-#+BEGIN_SRC leisure :results test
+#+BEGIN_SRC leisure :results dynamic
 3 + 4
 #+END_SRC
 :EXPECTED:
 : 7
 :END:
-#+BEGIN_SRC leisure :results test
+#+BEGIN_SRC leisure :results dynamic
 3 + 4
 #+END_SRC
 #+RESULTS:
 : 7
+#+BEGIN_SRC leisure
+3 + 4
+#+END_SRC
+:EXPECTED:
+: 7
+:END:
 * list
 - duh
 - normal [[http:maluba.com][fred *bold* */bold italic/*]]
