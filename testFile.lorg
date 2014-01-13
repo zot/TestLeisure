@@ -18,18 +18,6 @@ This is the bubba code
 #+RESULTS:
 : 70
 : [1 2 &lt;svg xmlns="http://www.w3.org/2000/svg" version="1.1" width='240' height='228' viewbox='230 74 240 228'&gt;&lt;polygon points="350 75  379 161 469 161 397 215 423 301 350 250 277 301 303 215 231 161 321 161" stroke="black" stroke-width="2" fill="yellow" /&gt;&lt;/svg&gt; 3 &lt;svg xmlns="http://www.w3.org/2000/svg" version="1.1" width='240' height='228' viewbox='230 74 240 228'&gt;&lt;polygon points="350 75  379 161 469 161 397 215 423 301 350 250 277 301 303 215 231 161 321 161" stroke="black" stroke-width="2" fill="yellow" /&gt;&lt;/svg&gt; 4]
-* autotest
-#+BEGIN_SRC leisure :results def
-x = 5
-#+END_SRC
-#+BEGIN_SRC leisure :results autotest
-x
-#+END_SRC
-:EXPECTED:
-: 5
-:END:
-#+RESULTS:
-: 5
 * test
 #+BEGIN_SRC leisure :results test
 3 + 4
@@ -71,6 +59,18 @@ x
 :EXPECTED:
 : 7
 :END:
+* autotest
+#+BEGIN_SRC leisure :results def
+x = 5
+#+END_SRC
+#+BEGIN_SRC leisure :results autotest
+x
+#+END_SRC
+:EXPECTED:
+: 5
+:END:
+#+RESULTS:
+: 5
 * list
 - duh
 - normal [[http:maluba.com][fred *bold* */bold italic/*]]

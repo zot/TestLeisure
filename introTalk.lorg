@@ -29,6 +29,231 @@
 </table>
 #+END_HTML
 * Welcome to Leisure!
+- The Leisure project started around April, 2012
+
+- Leisure is very much a work in progress
+
+- It's a language and an environment
+
+- It is very operational, but a lot of parts are rough or naively implemented
+
+- Some parts have already gone through several iterations
+* Project Hieroglyph
+  I have followed the dwindling of the space program with sadness, even bitterness.
+  Where’s my orbiting, donut-shaped space station? Where’s my fleet of colossal
+  Nova rockets? Where’s my ticket to Mars?...
+
+  “You’re the ones who’ve been slacking off!” proclaimed Michael Crow, the President
+  of Arizona State University, when I ran all of this by him later. He was referring,
+  of course, to the science fiction writers. The scientists and engineers, he seemed
+  to be saying, were ready, and looking for things to do. Time for the SF writers to
+  start pulling their weight!
+
+  -- Neal Stephenson
+
+  Stephenson has put together a project to get write stories that are, "throwbacks, in
+  a manner of speaking, to 1950′s-style SF, in that they would depict futures in which
+  Big Stuff Got Done"
+* A Crisis in the Field
+- There's a crisis in the CS field
+
+  ...current incoming students have grown up with video games and use
+  iPhones daily.  Furthermore, they now arrive from high school with incredibly
+  weak backgrounds.  We used to require calculus before beginning CS.  But now
+  we don't require calculus at all! (Or we'd have no majors.)  When they see
+  programming, even in very high-level languages, many incoming students recoil.
+  They really enjoy *using* computers and may have even installed Windows, but
+  they don't like building things...
+
+  -- private communication from a prominent CS professor
+* A Crisis in the Field
+  - And yet, Minecraft is so popular...
+
+  - People even build computers inside of Minecraft, like Nand To Tetris...
+* A Crisis in the Field
+    [[talk/minecraftComputer.png]]
+* A Crisis in the Field
+  - Programming for me is a lot like Minecraft
+
+  - Can we help it be more like Minecraft for other people?
+* Dynabook
+  - Alan Kay's concept from 1972
+
+    - This actually goes back to his research in the 60s
+
+  "A personal computer for children of all ages"
+  [[talk/dynabookPrototype.jpg]]
+
+  - We already have machines powerful enough
+
+  - Maybe a special type of document can provide what's missing...
+
+  - It needs to be free and easy to use (no install, etc.)
+* Dynabook
+  - Neal Stephenson wrote a book called The Diamond Age: Or, a Young Lady's Illustrated Primer
+
+  - The primer is essentially a Dynabook
+* Welcome to Leisure!
+- Leisure is a */toy/* -- it's a bunch of stuff to play with
+
+- A new environment (with some neat stuff)
+
+- For kids!
+
+- For grownups!
+
+- Maybe even jaded, expert grownups...
+* Back to the Dynabook
+- We have the power to make the dynabook, but it's still not here...
+
+- What if we made special documents that were dynabooks?
+
+- What if each document was like its own computer?
+
+  - Documents can contain media
+
+  - Versioning can provide state
+
+- What if the document's source was part of the document itself
+
+  - End-user multimedia document
+
+  - Interactive
+
+  - Annotated source code (maybe hidden by default)
+
+  - Editable at runtime
+
+- These concepts aren't /that/ new, they just haven't been that accessible to people, lately
+* Document-centric computing
+- Smalltalk -- a smalltalk image is almost a document (not really linear)
+
+- Hypercard
+
+- EMACS (file-local variables, orgmode)
+
+- Oberon (Acme, Wily, Ober)
+
+- Tiddlywiki (almost a JavaScript/HTML version of hypercard)
+* Document-centric computing
+- Mathematica is probably the closest thing to Leisure out there
+
+- It's far from free
+* Document-centric computing
+- HTML5 really has a lot of promise for this!
+
+- HTML is made for documents (uh... duh?)
+
+- You can edit HTML in a browser
+
+- HTML documents can present a lot of different types of media
+
+- Web services can fill in the blanks (one in particular :) )
+* Computing education
+- Fun is important
+
+- Promote building
+
+  - Documents are not just source fies
+
+  - Document can embed media
+
+  - Promote pride of ownership
+
+  - Each document is like a tiny computer -- mod it!
+* Can we improve human and computer communication and understanding?
+
+
+  - REPLs are good, but they are mostly read-only
+
+    - Except for the line at the bottom
+
+  - What if you could embed runnable examples directly in the source?
+
+  - Interact with the program directly through the source code?
+
+  - Watch expressions are good
+
+    - But they usually work better in debuggers than in REPLs
+
+    - In fact, they're very close to test cases, in a way...
+
+  - Interact with the *author* directly through the source code?
+
+  - With better understanding, people might actually reuse code
+
+    - Instead of rewriting it
+* Can we improve human and computer communication and understanding?
+
+
+  - REPLs are good, but they are mostly read-only
+
+    - Except for the line at the bottom
+
+  - What if you could embed runnable examples directly in the source?
+
+#+BEGIN_SRC leisure :results dynamic
+print 'hello'
+#+END_SRC
+
+  - Interact with the program directly through the source code?
+
+#+BEGIN_SRC leisure :results static
+setTheme ''
+#+END_SRC
+
+#+BEGIN_SRC leisure :results static
+setTheme 'steampunk'
+#+END_SRC
+* Can we improve human and computer communication and understanding?
+
+
+  - Watch expressions are good
+
+    - But they usually work better in debuggers than in REPLs
+
+#+BEGIN_SRC leisure :results def
+x = 5
+#+END_SRC
+
+#+BEGIN_SRC leisure :results dynamic :update any
+x
+#+END_SRC
+#+RESULTS:
+: 5
+
+    - In fact, they're very close to test cases, in a way...
+* Computing Education
+  - Interact with the *author* directly through the source code
+
+#+NAME: firstTwo
+#+BEGIN_SRC leisure :results def
+firstTwo = take 2
+#+END_SRC
+
+Here's an example firstTwo:
+#+BEGIN_SRC leisure :results dynamic
+firstTwo [1 2 3 4]
+#+END_SRC
+  - With better understanding, people might actually reuse code
+
+    - Instead of rewriting it
+* Computing Education
+  - promote exploration -- peeking under the hood
+
+    - view ASTs
+
+    - dynamic expression results update as you type (or slide)
+
+    - dynamic test cases update as you type
+
+    - partially applied functions are completely first-class (parameters are visible and usable)
+* OLD STUFF
+ *X*
+ *X*
+ *X*
+ *X*
+* Welcome to Leisure!
 #+BEGIN_HTML
 <div style="text-align: center">Here's the <a href="https://github.com/zot/Leisure">project page</a></div>
 #+END_HTML
@@ -71,11 +296,11 @@
 #+BEGIN_HTML
 <div style="text-align: center">Here's the <a href="https://github.com/zot/Leisure">project page</a></div>
 #+END_HTML
-- Leisure is: a **Toy**
+- Leisure is: a */Toy/*
 
 - We like to share our toys.
 
-- Leisure is **open source**.
+- Leisure is */open source/*.
 
 - Please play with it and change it!
 
@@ -415,7 +640,7 @@ ex2 = concat[1 2 3]
 - Do (a lot like Haskell's do) is a macro
 
 * The Language: Metaprogramming
-- parse filters are like macros, but an active parse filter processes **all** code
+- parse filters are like macros, but an active parse filter processes */all/* code
 
 - Infix is implemented in Leisure as a parse filter
 #+BEGIN_SRC leisure :results dynamic
@@ -541,3 +766,7 @@ do
 
 Please help!
 If you want to get in touch, you can email me at bill dot burdick at gmail dot com.
+* Presentation Code
+#+BEGIN_SRC leisure :results def
+toggleSlides
+#+END_SRC
