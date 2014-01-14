@@ -156,7 +156,7 @@
 
 - Promote building
 
-  - Documents are not just source fies
+  - Documents are not just source files
 
   - Document can embed media
 
@@ -242,19 +242,19 @@ firstTwo [1 2 3 4]
 
     - Instead of rewriting it
 * Computing Education
-  - promote exploration -- peeking under the hood
+  - Promote exploration -- peeking under the hood
 
-    - view ASTs
+    - View ASTs
 
-    - dynamic expression results update as you type (or slide)
+    - Dynamic expression results update as you type (or slide)
 
-    - dynamic test cases update as you type
+    - Dynamic test cases update as you type
 
-    - partially applied functions can make sense
+    - Partially applied functions can make sense
 * Computing Education
-  - promote exploration -- peeking under the hood
+  - Promote exploration -- peeking under the hood
 
-    - view ASTs
+    - View ASTs
 
 #+BEGIN_SRC leisure :results def
 myLast l = isNil (tail l)
@@ -262,7 +262,7 @@ myLast l = isNil (tail l)
   myLast (tail l)
 #+END_SRC
 * Computing Education
-    - dynamic expression results update as you type (or slide)
+    Dynamic expression results update as you type (or slide)
 
 #+BEGIN_SRC leisure :results dynamic
 rotate (polygon nil) 0
@@ -270,7 +270,7 @@ rotate (polygon nil) 0
 #+RESULTS:
 : <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width='240' height='228' viewbox='230 74 240 228'><g transform="rotate(0)"><polygon points="350 75  379 161 469 161 397 215 423 301 350 250 277 301 303 215 231 161 321 161" stroke="black" stroke-width="2" fill="orange" /></g></svg>
 * Computing Education
-    - dynamic test cases update as you type
+    Dynamic test cases update as you type
 #+BEGIN_SRC leisure :results def
 myLast2 l = isNil (tail l)
   head l
@@ -288,7 +288,46 @@ myLast2 [1 2 3]
 * Computing Education
 Partially applied functions can make sense
 
+* Computing Education
+Partially applied functions can make sense
 
+#+BEGIN_SRC leisure :results dynamic
+[1 2 (cons 3) 4]
+#+END_SRC
+
+- They're completely first-class (parameters are accessable)
+
+- The display code for partially applied functions is written in Leisure
+* Back to Documents
+- Orgmode is a fantastic EMACS tool
+
+- It's just */text/*, but it represents /very/ rich documents that are more than just nice looking text
+
+  - Outline format, tags, properties, code, html, tables, data, ...
+
+- Leisure supports a growing subset: lorg files
+
+- JavaScript orgMode parser is a separate open source project
+* Lorg files
+- Tags for visibility, categories
+
+- Leisure functions inherit block name and tags
+
+** Subpoint :tag1:tag2:
+#+NAME: propertyExample
+#+BEGIN_SRC leisure :results dynamic
+propertyExampleFunc x = x
+
+getProperties propertyExampleFunc
+#+END_SRC
+
+- Lorg files can store data in their own documents
+
+  - A lorg file can act to some extent like a Smalltalk image
+
+  - Remote lorg files fit well with the web
+
+- Docs can run code when loaded (old EMACS trick)
 * OLD STUFF
  *X*
  *X*
