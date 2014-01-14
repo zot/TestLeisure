@@ -110,6 +110,8 @@
 
 - What if we made special documents that were dynabooks?
 
+  - Documents don't have to cost money
+
 - What if each document was like its own computer?
 
   - Documents can contain media
@@ -182,9 +184,9 @@
 
   - Interact with the *author* directly through the source code?
 
-  - With better understanding, people might actually reuse code
+  - With better understanding, people might actually reuse code when they see it
 
-    - Instead of rewriting it
+    - Instead of throwing up their hands and rewriting it
 * Can we improve human and computer communication and understanding?
 
 
@@ -197,6 +199,8 @@
 #+BEGIN_SRC leisure :results dynamic
 print 'hello'
 #+END_SRC
+* Can we improve human and computer communication and understanding?
+
 
   - Interact with the program directly through the source code?
 
@@ -237,10 +241,22 @@ Try firstTwo out, below!
 #+BEGIN_SRC leisure :results dynamic
 firstTwo [1 2 3 4]
 #+END_SRC
+* Computing Education
+  - Leisure hooks up to Github
 
-  - With better understanding, people might actually reuse code
+    - Document storage
 
-    - Instead of rewriting it
+    - Connects programmers together
+
+      - You see their comments
+
+      - You can comment on their code
+
+      - Check out my blog post for [[http://this-statement-is-false.blogspot.com/2011/12/code-google.html][more stuff]]
+* Computing Education
+  - With better understanding, people might actually reuse code when they see it
+
+    - Instead of throwing up their hands and rewriting it
 * Computing Education
   - Promote exploration -- peeking under the hood
 
@@ -297,11 +313,11 @@ Partially applied functions can make sense
 
 - They're completely first-class (parameters are accessable)
 
-- The display code for partially applied functions is written in Leisure
+- By the way, the display code for partially applied functions is just a Leisure function
 * Back to Documents
 - Orgmode is a fantastic EMACS tool
 
-- It's just */text/*, but it represents /very/ rich documents that are more than just nice looking text
+- It's just */text/*, but it represents /very/ rich documents that are more than just nice looking
 
   - Outline format, tags, properties, code, html, tables, data, ...
 
@@ -320,15 +336,278 @@ propertyExampleFunc x = x
 
 getProperties propertyExampleFunc
 #+END_SRC
-
+* Lorg files
 - Lorg files can store data in their own documents
 
   - A lorg file can act to some extent like a Smalltalk image
 
   - Remote lorg files fit well with the web
 
+#+BEGIN_SRC leisure :results static
+newCodeContent 'dataBlock' concat['data = ' {'height':11 'weight':721 'temperature':63}]
+#+END_SRC
+
+#+NAME: dataBlock
+#+BEGIN_SRC leisure :results def
+data = {'height':5 'weight':6 'temperature':512}
+#+END_SRC
+
 - Docs can run code when loaded (old EMACS trick)
+* Of course
+This presentation is a lorg file
+* Of course
+Leisure can present a lorg file in different ways
+
+- Slides
+
+- Plain
+
+- Fancy
+* The Leisure Environment Q&A
+...
+* The Language
+- Leisure compiles to Javascript
+
+- It's a naive compiler
+
+- There's a lot of room for improvement!
+* The Language: Minimizes parentheses
+- Each indented line adds a group to the overhanging expression
+
+- Grouping still works, though
+#+BEGIN_HTML
+<table><tr><td style="border: solid black 2px; padding: 20px"><pre style="font-weight: bold; font-size: 150%">
+[
+  [1 2]
+  [3 4]]
+</pre></td><td><span style="vertical-align: middle; margin: 30px; font-weight: bold; font-size: 150%">---&gt;</span></td><td style="border: solid black 2px; padding: 20px"><pre style="font-weight: bold; font-size: 150%">
+[ ([ 1 2 ]) ([ 3 4 ]) ]
+</pre></td></tr></table>
+#+END_HTML
+
+- [ is a macro and '[' and ']' make groups
+#+BEGIN_SRC leisure :results dynamic
+indentation = [
+  [1 2]
+  [3 4]]
+
+indentation
+#+END_SRC
+* The Language: Minimizes parentheses
+- Macros rewrite their expressions at compile time, like in Clojure (Lisp)
+
+- Macros can do varargs, which isn't so easy in pure Lambda Calculus
+
+#+BEGIN_SRC leisure :results dynamic
+f4 = concat[1 2 3]
+f4
+#+END_SRC
+* The Language: It's lazy
+#+BEGIN_SRC leisure :results dynamic
+ignore2nd a b = a
+ignore2nd (error 'an error') 1
+ignore2nd 1 (error 'an error')
+ones = [1 | ones]
+take 5 ones
+dbl x = eq x 0
+  0
+  2 + (dbl x - 1)
+dbl -1
+f x y = do
+  a = x
+  b = dbl y
+  y < 0
+    a
+    b
+f 2 -1
+f 2 2
+#+END_SRC
+* The Language: Partial application
+- It's like Lambda Calculus
+
+- And Haskell
+
+(Except that it's dynamically typed and it can display partial applications) :)
+* The Language: Partial application
+#+BEGIN_SRC leisure :results dynamic
+cons 1 nil
+cons 1
+3 + 2
+3 +
+[(3+) (cons 1) 57]
+#+END_SRC
+* The Language: Metaprogramming
+- Basic parsing can define tokens and groups
+
+#+BEGIN_SRC leisure :results dynamic
+[1 2 3]
+#+END_SRC
+* The Language: Metaprogramming
+- Macros rewrite expressions (input and output is a list)
+
+  - Not hygienic, yet
+
+- Combining groups with macros can work like varargs
+
+[ ... ]
+
+#+BEGIN_SRC leisure :results dynamic
+ex1 = [1 2 3]
+#+END_SRC
+
+concat[ ... ]
+
+#+BEGIN_SRC leisure :results dynamic
+ex2 = concat[1 2 3]
+#+END_SRC
+* The Language: Metaprogramming
+- Do (a lot like Haskell's do) is a macro
+
+#+BEGIN_SRC leisure :results dynamic
+do
+  x = 1
+  y = 2
+  x + y
+#+END_SRC
+* The Language: Metaprogramming
+- Parse filters are like macros, but an active parse filter processes */all/* code
+
+- Infix is implemented in Leisure as a parse filter
+
+#+BEGIN_SRC leisure :results dynamic
+ex3 = 1 + (2 + 3) + 4
+#+END_SRC
+
+- Parse filters are only active within a given file
+
+- Each file can specify which parse filters it uses
+
+- Parse filters can be activated/deactivated at any point in a file
+* The Language: Metaprogramming
+#+BEGIN_HTML
+<style>
+        .slideHtml #flow {
+                position: absolute;
+                /*top: 52px;*/
+                /*top: 80px;*/
+                /*top: calc(40px + 28px + 1em);*/
+                top: 140px;
+                left: calc(50% - 180px);
+                height: calc(100% - 140px - 72px);
+                width: auto;
+        }
+</style>
+<img id='flow' src='images/LeisureParsingFlow.svg'></img>
+#+END_HTML
+* The Language: Functional support
+- Streams, etc.
+#+BEGIN_SRC leisure :results dynamic
+increasing x = [x | (increasing x + 1)]
+naturals = increasing 1
+even? x = x % 2 == 0
+take 5 (filter even? (map (\x . x + 10) naturals))
+#+END_SRC
+* The Language: Data Types
+- Any function which only returns a lambda places a data type with its name on the lambda
+#+BEGIN_SRC leisure :results dynamic
+getType [1]
+person name addr = \f . f name addr
+getType (person 'bob' '123 Maple St')
+#+END_SRC
+* The Language: Function advice
+An easy way to handle defaults and extensions
+
+#+BEGIN_SRC leisure :results def
+person name addr = \f . f name addr
+
+defaultName x = 'Default'
+defCase defaultName.person p | hasType p person -> p \n a . n
+#+END_SRC
+
+#+BEGIN_SRC leisure :results dynamic
+defaultName 3
+defaultName (person 'bob' '123 Maple St')
+#+END_SRC
+* The Language: Function properties
+- Functions can be declared with key-value properties
+
+- Type assertions
+
+- Alternate behavior for known types (like pretty-printing association lists)
+
+#+BEGIN_SRC leisure :results dynamic
+{'a':1 'b':2}
+getType {'a':1 'b':2}
+head {'a':1 'b':2}
+getProperties {'a':1 'b':2}
+#+END_SRC
+* The Language: Monads
+- Expression output box is part of monad's "environment"
+
+#+BEGIN_SRC leisure :results dynamic
+do
+    x <- prompt "What is your name?"
+    print concat["Hello, " x]
+#+END_SRC
+* The Language: Monads
+- Code that runs at load-time can use monads to affect the Leisure environment
+
+- Import is monadic
+
+- Parser directives are monadic
+
+- Monads can affect the notebook environment
+
+- Setting themes
+
+- Turning autotests on or off
+* Future: Pattern matching
+- Structural patterns, like in Haskell
+
+  last [x] = x
+  last [x | y] = last y
+
+  equal x y = eq x y
+  equal [h1 | t1] [h2 | t2] = and
+    equal h1 h2
+    equal t1 t2
+
+  find key [] = none
+  find key [key value | rest] = some value
+  find key [\_ \_ | rest] = find key rest
+
+  getName (person {name: n}) = n
+
+- Uses function advice
+
+- Can make a dispatch table based on data type
+* Future: Debugging
+- Support specific to lazy evaluation is in the works
+
+- Some omniscient debugging techniques
+
+- Two stack traces for an error
+
+  - Stack trace of where a value was created
+
+  - Stack trace of where a value was requested
+* The Language Q&A
+...
+* Contact
+[[https://github.com/zot/Leisure][Github project]]
+[[githubUrl.png]]
+
+[[http://zot.github.com/Leisure/talk.html?slides=true][This notebook]]
+[[slidesUrl.png]]
+
+Please help!
+If you want to get in touch, you can email me at bill dot burdick at gmail dot com.
+* Presentation Code
+#+BEGIN_SRC leisure :results def
+toggleSlides
+#+END_SRC
 * OLD STUFF
+
  *X*
  *X*
  *X*
@@ -846,7 +1125,3 @@ do
 
 Please help!
 If you want to get in touch, you can email me at bill dot burdick at gmail dot com.
-* Presentation Code
-#+BEGIN_SRC leisure :results def
-toggleSlides
-#+END_SRC
