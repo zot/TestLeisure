@@ -84,7 +84,7 @@ x
 * list
 - duh
 - normal [[http:maluba.com][fred *bold* */bold italic/*]]
-- dur
+- durP
 * HTML slide
 #+BEGIN_HTML
 <style>
