@@ -127,5 +127,12 @@ x
   - three
 - four
 * two
+BubbaGump4
+
+#+BEGIN_SRC leisure :results def
+setTheme 'flat'
+#+END_SRC
+#+RESULTS:
+
 test markup *bold* word /italic/ fred _underline_
 [[tinyconcepts.png]]
