@@ -15,11 +15,14 @@ setTheme 'flat'
 #+NAME: zeb
 #+BEGIN_SRC leisure :results def
 zeb x = x * 2
+
+
+
 #+END_SRC
 #+RESULTS:
 #+NAME: bubba
 This is the bubba code
-#+BEGIN_SRC leisure :results test
+#+BEGIN_SRC leisure :results static
 30 + 40
 [1 2 (rotate (polygon nil) 0) 3 (polygon nil) 4]
 #+END_SRC
@@ -90,11 +93,11 @@ duh
 x = 1546
 #+END_SRC
 #+RESULTS:
-#+BEGIN_SRC leisure :results dynamic
+#+BEGIN_SRC leisure :results autotest
 x
 #+END_SRC
 :EXPECTED:
-: 58
+: 1546
 :END:
 #+RESULTS:
 : 1546
