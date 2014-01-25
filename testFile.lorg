@@ -1,13 +1,14 @@
+#+BEGIN_SRC leisure :results def
+setTheme 'flat'
+#+END_SRC
 * code                                                                  :duh:
 - one
 
 - two
 
-- three
+- three3
 
-- five
-
-- eight
+- five5
 
 #+NAME: zeb
 #+BEGIN_SRC leisure :results def
@@ -85,6 +86,11 @@ x
 - duh
 - normal [[http:maluba.com][fred *bold* */bold italic/*]]
 - durP
+bleh..
+this is silly
+
+
+
 * HTML slide
 #+BEGIN_HTML
 <style>

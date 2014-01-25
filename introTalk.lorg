@@ -1,3 +1,6 @@
+#+BEGIN_SRC leisure :results def
+setTheme 'steampunk'
+#+END_SRC
 * Welcome to Leisure!
 - Use the page up, and page down keys to navigate
 
