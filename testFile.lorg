@@ -1,7 +1,4 @@
-#+BEGIN_SRC leisure :results def
-setTheme 'steampunk'
-#+END_SRC
-#+RESULTS:
+
 * code                                                                  :duh:
 
 - one
@@ -79,7 +76,9 @@ This is the bubba code
 : 7
 :END:
 #+RESULTS:
-wiggle wiggle yeah#+BEGIN_SRC leisure :results dynamic
+
+#+NAME: wiggle wiggle yeah
+#+BEGIN_SRC leisure :results dynamic
 3 + 4
 #+END_SRC
 #+RESULTS:
@@ -145,7 +144,7 @@ this is silly
 #+NAME: fred
 #+BEGIN_SRC leisure
 5 + 6
-#+END_SR
+#+END_SRC
 
 - [X] one
   - [ ] two
@@ -155,7 +154,7 @@ this is silly
 BubbaGump4
 
 #+BEGIN_SRC leisure :results def
-setTheme 'flat'
+setTheme 'googie'
 #+END_SRC
 #+RESULTS:
 
