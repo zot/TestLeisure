@@ -1,5 +1,5 @@
 #+BEGIN_SRC leisure :results def
-setTheme 'flat'
+setTheme 'steampunk'
 #+END_SRC
 * code                                                                  :duh:
 
@@ -110,13 +110,14 @@ this is silly
 #+BEGIN_HTML
 <style>
         .slideHtml #flow {
-                position: absolute;
+                position: relative;
                 /*top: 52px;*/
                 /*top: 80px;*/
                 /*top: calc(40px + 28px + 1em);*/
-                top: 140px;
+                top: 0px;
                 left: calc(50% - 180px);
-                height: calc(100% - 140px - 72px);
+                max-height: calc(100% - 320px);
+                height: calc(100% - 320px);
                 width: auto;
         }
 </style>
