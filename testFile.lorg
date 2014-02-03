@@ -1,11 +1,14 @@
 * note
 :properties:
-:note-attachment: sidebar code
+:notes: sidebar code, float
 :end:
 Types of attachment:
 - sidebar slidename
 - slide style-string
 - fixed style-string
+#+BEGIN_SRC leisure :results dynamic
+3+4
+#+END_SRC
 * code                                                                  :duh:
 ** duh
 
