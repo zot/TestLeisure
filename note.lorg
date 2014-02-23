@@ -1,0 +1,22 @@
+* Note info                                                             :duh:
+Slides can render as sidebar or floating notes
+note property makes a note
+values:
+- sidebar
+- float x y w h
+- skip
+Skip means that sidebar notes following this one will appear in the slide above it (the first non-note slide)
+* note
+:properties:
+:note: sidebar
+:end:
+#+BEGIN_SRC leisure :results dynamic
+3+4
+#+END_SRC
+* floaty note
+:properties:
+:note: float 100 100 100 100
+:end:
+Floaty contents
+* Next slide
+Next slide contents
